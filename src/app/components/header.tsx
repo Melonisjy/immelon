@@ -21,14 +21,12 @@ export default function Header() {
   return (
     <div
       className={`w-full justify-center ${
-        scrollY && scrollY > 0 ? "bg-black" : "bg-transparent"
+        scrollY && scrollY > 0 ? "bg-slate-800" : "bg-transparent"
       } fixed`}
     >
       <header
         className={`w-full h-16 flex justify-between items-center ${
-          scrollY && scrollY > 0
-            ? "text-white"
-            : "border-b-slate-400 border-b-2"
+          scrollY && scrollY > 0 ? "text-white" : "text-slate-700"
         } px-12`}
       >
         <div className="text-xl select-none">Lee Joo Yeol</div>
