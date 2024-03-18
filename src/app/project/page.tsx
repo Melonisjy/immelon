@@ -2,10 +2,13 @@
 
 import React from "react";
 
+const INSURSAND_IMAGE = "/image/projects/insursand2.png";
+
 export interface IProject {
   title: string;
   contents: string;
   onClick: () => void;
+  imgSrc: string;
 }
 
 function Project() {
@@ -15,18 +18,21 @@ function Project() {
       contents:
         "INSURSAND revolutionizes access to insurance in DeFi with two offerings: asset and staking insurance. Operating on a test network, we secure crypto assets, transforming the DeFi insurance landscape, and empowering users to explore the digital economy confidently.",
       onClick: () => console.log("sss"),
+      imgSrc: INSURSAND_IMAGE,
     },
     {
       title: "P2D (Play To Donate)",
       contents:
         "INSURSAND revolutionizes access to insurance in DeFi with two offerings: asset and staking insurance. Operating on a test network, we secure crypto assets, transforming the DeFi insurance landscape, and empowering users to explore the digital economy confidently.",
       onClick: () => console.log("sss"),
+      imgSrc: INSURSAND_IMAGE,
     },
     {
       title: "INSURSAND",
       contents:
         "INSURSAND revolutionizes access to insurance in DeFi with two offerings: asset and staking insurance. Operating on a test network, we secure crypto assets, transforming the DeFi insurance landscape, and empowering users to explore the digital economy confidently.",
       onClick: () => console.log("sss"),
+      imgSrc: INSURSAND_IMAGE,
     },
   ];
 
@@ -42,7 +48,7 @@ function Project() {
           {`More about project ->`}
         </button>
       </div>
-      <div></div>
+      <img src={project.imgSrc} alt="img"></img>
     </article>
   );
 
