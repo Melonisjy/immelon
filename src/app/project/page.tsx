@@ -1,10 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 
 const INSURSAND_IMAGE = "/image/projects/insursand2.png";
 
 export interface IProject {
+  url: string;
   title: string;
   contents: string;
   onClick: () => void;
@@ -14,6 +16,7 @@ export interface IProject {
 function Project() {
   const projectList: IProject[] = [
     {
+      url: "insursand",
       title: "INSURSAND",
       contents:
         "INSURSAND revolutionizes access to insurance in DeFi with two offerings: asset and staking insurance. Operating on a test network, we secure crypto assets, transforming the DeFi insurance landscape, and empowering users to explore the digital economy confidently.",
@@ -21,6 +24,7 @@ function Project() {
       imgSrc: INSURSAND_IMAGE,
     },
     {
+      url: "p2d",
       title: "P2D (Play To Donate)",
       contents:
         "INSURSAND revolutionizes access to insurance in DeFi with two offerings: asset and staking insurance. Operating on a test network, we secure crypto assets, transforming the DeFi insurance landscape, and empowering users to explore the digital economy confidently.",
@@ -28,6 +32,7 @@ function Project() {
       imgSrc: INSURSAND_IMAGE,
     },
     {
+      url: "insursand",
       title: "INSURSAND",
       contents:
         "INSURSAND revolutionizes access to insurance in DeFi with two offerings: asset and staking insurance. Operating on a test network, we secure crypto assets, transforming the DeFi insurance landscape, and empowering users to explore the digital economy confidently.",
@@ -42,12 +47,14 @@ function Project() {
         <div className="py-20 px-4 w-2/5 flex flex-col gap-12 justify-between">
           <div className="text-4xl text-slate-800">{project.title}</div>
           <div className="text-slate-600">{project.contents}</div>
-          <button
-            onClick={project.onClick}
-            className="flex justify-end w-fit text-slate-800"
-          >
-            {`More about project ->`}
-          </button>
+          <Link href={`/project/${project.url}`}>
+            <button
+              onClick={project.onClick}
+              className="flex justify-end w-fit text-slate-800"
+            >
+              {`More about project ->`}
+            </button>
+          </Link>
         </div>
         <section className="flex items-center">
           <img
