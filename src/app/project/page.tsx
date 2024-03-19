@@ -38,17 +38,26 @@ function Project() {
 
   const _renderProject = (project: IProject, index: number) => (
     <article key={index} className="rounded-lg mt-28 mx-4 bg-slate-400">
-      <div className="py-20 pl-4 w-2/5 flex flex-col gap-12 justify-between">
-        <div className="text-4xl text-slate-800">{project.title}</div>
-        <div className="text-slate-600">{project.contents}</div>
-        <button
-          onClick={project.onClick}
-          className="flex justify-end w-fit text-slate-800"
-        >
-          {`More about project ->`}
-        </button>
+      <div className="flex justify-between px-12">
+        <div className="py-20 px-4 w-2/5 flex flex-col gap-12 justify-between">
+          <div className="text-4xl text-slate-800">{project.title}</div>
+          <div className="text-slate-600">{project.contents}</div>
+          <button
+            onClick={project.onClick}
+            className="flex justify-end w-fit text-slate-800"
+          >
+            {`More about project ->`}
+          </button>
+        </div>
+        <section className="flex items-center">
+          <img
+            className="rounded-xl"
+            src={project.imgSrc}
+            alt="img"
+            width={500}
+          />
+        </section>
       </div>
-      <img src={project.imgSrc} alt="img"></img>
     </article>
   );
 
