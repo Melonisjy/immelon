@@ -77,7 +77,7 @@ function Project() {
           Explore my projects
         </h1>
       </section>
-      <section className="grid grid-cols-1">
+      <section className="grid grid-cols-1 mb-4">
         {projectList.map((project, index) => _renderProject(project, index))}
       </section>
     </div>
