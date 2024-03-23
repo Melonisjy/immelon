@@ -22,14 +22,16 @@ export default function Header() {
     <div
       className={`w-full justify-center ${
         scrollY && scrollY > 0 ? "bg-slate-800" : "bg-transparent"
-      } fixed`}
+      } fixed z-50`}
     >
-      <header
+      <div
         className={`w-full h-16 flex justify-between items-center ${
           scrollY && scrollY > 0 ? "text-white" : "text-slate-700"
         } px-12`}
       >
-        <div className="text-xl select-none">Lee Joo Yeol</div>
+        <div className="text-xl">
+          <Link href="/">Lee Jooyeol</Link>
+        </div>
         <section className="flex gap-20">
           <nav>
             <Link href="/aboutme">About Me</Link>
@@ -45,7 +47,7 @@ export default function Header() {
           </nav>
         </section>
         <div>bla bla</div>
-      </header>
+      </div>
     </div>
   );
 }
