@@ -22,7 +22,7 @@ export default function Header() {
     <div
       className={`w-full justify-center ${
         scrollY && scrollY > 0 ? "bg-slate-800" : "bg-transparent"
-      } fixed z-50`}
+      } fixed`}
     >
       <div
         className={`w-full h-16 flex justify-between items-center ${
