@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -43,7 +44,7 @@ function Project() {
 
   const _renderProject = (project: IProject, index: number) => (
     <article key={index} className="rounded-lg mt-28 mx-4 bg-slate-400">
-      <div className="flex justify-between px-12">
+      <div className="flex justify-around px-12">
         <div className="py-20 px-4 w-2/5 flex flex-col gap-12 justify-between">
           <div className="text-4xl text-slate-800">{project.title}</div>
           <div className="text-slate-600">{project.contents}</div>
@@ -57,11 +58,12 @@ function Project() {
           </Link>
         </div>
         <section className="flex items-center">
-          <img
-            className="rounded-xl"
+          <Image
+            className="rounded-xl shadow-2xl shadow-blue-200 ring-2 ring-slate-200"
             src={project.imgSrc}
             alt="img"
             width={500}
+            height={200}
           />
         </section>
       </div>
