@@ -1,3 +1,3 @@
 export default function Home() {
-  return <></>;
+  return <div className="h-full pt-16">home</div>;
 }
