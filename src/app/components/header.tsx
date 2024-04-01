@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <div
       className={`w-full justify-center ${
-        scrollY && scrollY > 0 ? "bg-slate-800" : "bg-transparent"
+        scrollY && scrollY > 0 ? "bg-slate-800" : "bg-transparent border-b-2"
       } fixed`}
     >
       <div
