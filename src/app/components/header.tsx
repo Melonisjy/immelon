@@ -4,14 +4,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Header() {
-  const [scrollY, setScrollY] = useState<number>();
-
   const menu = [
     { path: "/aboutme", name: "About Me" },
     { path: "/work", name: "Work" },
     { path: "/project", name: "Project" },
     { path: "/blog", name: "Blog" },
   ];
+
+  const [scrollY, setScrollY] = useState<number>();
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -26,29 +26,27 @@ export default function Header() {
   };
 
   return (
-    <div
-      className={`w-full justify-center duration-300 opacity-95 ${
-        scrollY && scrollY > 0 ? "bg-slate-900" : "bg-transparent"
-      } fixed`}
-    >
+    <div className={`w-full justify-center duration-300 opacity-95 fixed`}>
       <div
-        className={`w-full h-16 flex justify-between items-center ${
-          scrollY && scrollY > 0 ? "text-white" : "text-slate-700 border-b-2"
-        } px-12`}
+        className={`w-full h-16 flex justify-between items-center pl-12  pr-32`}
       >
         <div className="text-xl">
           <Link href="/">Lee Jooyeol</Link>
         </div>
-        <section className="flex gap-20">
+        <section className="flex gap-20 divide-x-[1px] divide-slate-400">
           {menu.map((menu, index) => {
             return (
-              <nav key={index}>
-                <Link href={menu.path}>{menu.name}</Link>
+              <nav key={index} className="flex px-4 hover:bg-slate-800">
+                <Link href={menu.path}>
+                  <div className="text-xs text-slate-500 border-b-2 w-fit border-slate-500">
+                    00{index + 1}
+                  </div>
+                  <div>{menu.name}</div>
+                </Link>
               </nav>
             );
           })}
         </section>
-        <div>bla bla</div>
       </div>
     </div>
   );
