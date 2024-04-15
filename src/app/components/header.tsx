@@ -26,24 +26,30 @@ export default function Header() {
   };
 
   return (
-    <div className={`w-full justify-center duration-300 opacity-95 fixed`}>
+    <div
+      className={`w-full justify-center duration-300 opacity-95 bg-white fixed`}
+    >
       <div
         className={`w-full h-16 flex justify-between items-center pl-12  pr-32`}
       >
         <div className="text-xl">
           <Link href="/">Lee Jooyeol</Link>
         </div>
-        <section className="flex gap-20 divide-x-[1px] divide-slate-400">
+        <section className="flex divide-x-[1px] divide-slate-400">
           {menu.map((menu, index) => {
             return (
-              <nav key={index} className="flex px-4 hover:bg-slate-800">
-                <Link href={menu.path}>
+              <Link
+                className="flex px-4 pr-20 hover:bg-slate-100 duration-100"
+                key={index}
+                href={menu.path}
+              >
+                <nav>
                   <div className="text-xs text-slate-500 border-b-2 w-fit border-slate-500">
                     00{index + 1}
                   </div>
                   <div>{menu.name}</div>
-                </Link>
-              </nav>
+                </nav>
+              </Link>
             );
           })}
         </section>
