@@ -11,7 +11,7 @@ import Image from "next/image";
 interface myInfoProps {
   name: string;
   link: string;
-  icon: JSX.Element;
+  icon: React.ReactNode;
 }
 
 export const myInfoLink: myInfoProps[] = [
