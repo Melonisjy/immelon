@@ -4,3 +4,24 @@
   align-items: center;
   flex-direction: column;
 }
+
+.background-animate {
+  background-size: 200%;
+  -webkit-animation: AnimateBackground 10s ease infinite;
+  -moz-animation: AnimateBackground 10s ease infinite;
+  animation: AnimateBackground 10s ease infinite;
+}
+
+@keyframes AnimateBackground {
+  0% {
+    background-position: 0;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0;
+  }
+}
