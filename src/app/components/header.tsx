@@ -8,7 +8,6 @@ export default function Header() {
     { path: "/aboutme", name: "About Me" },
     { path: "/work", name: "Work" },
     { path: "/project", name: "Project" },
-    { path: "/blog", name: "Blog" },
   ];
 
   const [scrollY, setScrollY] = useState<number>();
@@ -27,10 +26,10 @@ export default function Header() {
 
   return (
     <div
-      className={`w-full justify-center duration-300 opacity-95 bg-white fixed`}
+      className={`w-full justify-center duration-300 backdrop-blur-sm fixed`}
     >
       <div
-        className={`w-full h-16 flex justify-between items-center pl-12  pr-32`}
+        className={`w-full h-16 flex justify-between items-center pl-12 pr-32`}
       >
         <div className="text-xl">
           <Link href="/">Lee Jooyeol</Link>
